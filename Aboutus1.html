@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | WebGuide</title>
+  <style>
+    :root{
+   --primary:#2563eb;
+   --accent:#38bdf8;
+   --dark:#1e293b;
+   --muted:#475569;
+   --bg-main:linear-gradient(135deg,#e0f2fe,#f8fafc);
+   --glass:rgba(255,255,255,0.9);
+   --radius:22px;
+   --shadow-soft:0 25px 50px rgba(0,0,0,.08);
+  }
+
+
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+  }
+
+  body{
+  min-height:100vh;
+  background:var(--bg-main);
+  color:var(--dark);
+  line-height:1.6;
+  }
+
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    /* Info Section */
+    .info-box {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 50px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    }
+
+    .info-box p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* Vision / Mission / Philosophy */
+    .split-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
+      padding: 50px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    }
+
+    .split-section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .split-text {
+      flex: 1;
+    }
+
+    .split-text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .split-text p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .split-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .split-image::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 70%);
+      filter: blur(40px);
+      z-index: 0;
+    }
+
+    .split-image img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .split-section,
+      .split-section.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .split-image::before {
+        width: 260px;
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <section class="page-header">
+    <h1>About WebGuide</h1>
+    <p>
+      Guiding individuals through self-discovery, informed decision-making, and
+      future-ready career pathways.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="container">
+
+    <!-- ABOUT -->
+    <section class="info-box">
+      <p>
+        At <strong>Web Guide</strong>, we use a scientific, data-driven approach to career guidance,
+        rooted in deep self-awareness. Our advanced AI technology conducts comprehensive
+        psychometric and aptitude assessments, evaluating personality traits, skills, and interests
+        with precision.
+        <br><br>
+        Combined with the expertise of experienced counsellors, we guide students and professionals
+        from self-discovery to employability. Our training programs bridge the gap between academic
+        learning and industry expectations, preparing individuals for successful and fulfilling careers.
+        <br><br>
+        <strong>Our strengths include:</strong><br>
+        • Holistic Career Guidance<br>
+        • Extensive Network of Counsellors & Industry Mentors<br>
+        • Comprehensive Career Database<br>
+        • Study Abroad Support<br>
+        • Future-Ready Skill Development
+      </p>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="split-section">
+      <div class="split-text">
+        <h2>Our Philosophy</h2>
+        <p>
+          We believe that a fulfilling career is achievable when individuals understand their
+          strengths, interests, and values. Our philosophy is centered on empowering people
+          to explore their potential and design career paths that lead to long-term professional
+          satisfaction.
+        </p>
+      </div>
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop"
+             alt="Career philosophy and guidance">
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="split-section reverse">
+      <div class="split-text">
+        <h2>Our Vision</h2>
+        <p>
+          We envision a world where individuals are empowered to make informed career choices
+          and reach their full potential. As a trusted career guidance platform, WebGuide strives
+          to bridge the gap between aspirations and achievements through accessible, effective tools.
+        </p>
+      </div>
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
+             alt="Vision and future planning">
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section class="split-section">
+      <div class="split-text">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to empower individuals to navigate the evolving career landscape with
+          confidence. Through personalized counselling, skill development, and continuous support,
+          we equip you to make informed decisions, achieve your goals, and find fulfillment in your
+          professional journey.
+        </p>
+      </div>
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+             alt="Mission driven teamwork">
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

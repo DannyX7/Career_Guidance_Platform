@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials | Web Guide</title>
+
+<style>
+:root{
+  --primary:#2563eb;
+  --accent:#38bdf8;
+  --dark:#1e293b;
+  --muted:#475569;
+  --bg:linear-gradient(135deg,#e0f2fe,#f8fafc);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--dark);
+}
+
+.container{
+  max-width:1000px;
+  margin:80px auto;
+  padding:40px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+/* TESTIMONIAL CARD */
+.testimonial{
+  background:#fff;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
+  margin-bottom:30px;
+}
+
+.testimonial p{
+  font-size:1.05rem;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.testimonial h4{
+  margin-top:15px;
+  color:var(--primary);
+}
+
+/* FORM */
+.form-box{
+  background:#fff;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
+  margin-top:60px;
+}
+
+.form-box h2{
+  margin-bottom:20px;
+}
+
+label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+input, textarea{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  margin-bottom:20px;
+  font-size:0.95rem;
+}
+
+button{
+  padding:14px 34px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(37,99,235,.35);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>What Our Users Say</h1>
+
+  <!-- TESTIMONIAL LIST -->
+  <div id="testimonial-list">
+
+    <div class="testimonial">
+      <p>
+        Web Guide helped me identify my strengths and choose the right career path.
+        The counselling sessions were insightful and motivating.
+      </p>
+      <h4>– College Student</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        The AI assessments gave me clarity I never had before.
+        Highly recommended for professionals looking to switch careers.
+      </p>
+      <h4>– Working Professional</h4>
+    </div>
+
+  </div>
+
+  <!-- ADD TESTIMONIAL FORM -->
+  <div class="form-box">
+    <h2>Add Your Testimony</h2>
+
+    <label>Your Testimony</label>
+    <textarea id="message" rows="4" placeholder="Write your experience..." required></textarea>
+
+    <label>Your Name / Role</label>
+    <input type="text" id="name" placeholder="Eg: Student, Professional" required>
+
+    <button onclick="addTestimonial()">Submit</button>
+  </div>
+</div>
+
+<script>
+function addTestimonial() {
+  const message = document.getElementById("message").value.trim();
+  const name = document.getElementById("name").value.trim();
+
+  if(message === "" || name === "") {
+    alert("Please fill all fields");
+    return;
+  }
+
+  const testimonialDiv = document.createElement("div");
+  testimonialDiv.className = "testimonial";
+
+  testimonialDiv.innerHTML = `
+    <p>${message}</p>
+    <h4>– ${name}</h4>
+  `;
+
+  document.getElementById("testimonial-list").appendChild(testimonialDiv);
+
+  // Clear form
+  document.getElementById("message").value = "";
+  document.getElementById("name").value = "";
+}
+</script>
+
+</body>
+</html>

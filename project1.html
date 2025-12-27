@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Guide | Career Guidance Platform</title>
+
+<style>
+:root{
+  --primary:#2563eb;
+  --accent:#38bdf8;
+  --dark:#1e293b;
+  --muted:#475569;
+  --bg-main:linear-gradient(135deg,#e0f2fe,#f8fafc);
+  --glass:rgba(255,255,255,0.9);
+  --radius:22px;
+  --shadow-soft:0 25px 50px rgba(0,0,0,.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:var(--bg-main);
+  color:var(--dark);
+  line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+  background:#fff;
+  padding:1rem 2.5rem;
+  box-shadow:0 4px 15px rgba(0,0,0,0.06);
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+
+/* ===== CUSTOM LOGO ===== */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-icon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight:700;
+  font-size:1.1rem;
+  box-shadow:0 10px 25px rgba(37,99,235,.4);
+}
+
+.logo-text{
+  font-size:1.5rem;
+  font-weight:700;
+  color:var(--dark);
+  letter-spacing:.5px;
+}
+
+.logo-text span{
+  color:var(--primary);
+}
+
+/* ===== NAV LINKS ===== */
+.links{
+  display:flex;
+  align-items:center;
+  gap:1.4rem;
+  font-weight:600;
+}
+
+.links a{
+  text-decoration:none;
+  color:var(--primary);
+}
+
+details summary{
+  cursor:pointer;
+  color:var(--primary);
+}
+
+details a{
+  display:block;
+  margin-top:6px;
+  font-size:.95rem;
+  color:var(--muted);
+  text-decoration:none;
+}
+
+/* ================= HERO ================= */
+.hero{
+  max-width:1200px;
+  margin:80px auto;
+  padding:60px;
+  background:var(--glass);
+  border-radius:28px;
+  box-shadow:0 30px 60px rgba(0,0,0,.08);
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:40px;
+}
+
+.hero h1{
+  font-size:2.6rem;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:var(--primary);
+}
+
+.hero p{
+  font-size:1.05rem;
+  color:var(--muted);
+  line-height:1.7;
+  margin-bottom:16px;
+}
+
+.cta{
+  margin-top:28px;
+  display:flex;
+  gap:15px;
+}
+
+.cta a{
+  text-decoration:none;
+}
+
+.cta button{
+  padding:14px 34px;
+  border:none;
+  border-radius:999px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.primary-btn{
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#fff;
+  box-shadow:0 12px 30px rgba(37,99,235,.35);
+}
+
+.secondary-btn{
+  background:#e0f2fe;
+  color:var(--primary);
+}
+
+/* ================= IMAGE ================= */
+.hero-img{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+.hero-img::before{
+  content:"";
+  position:absolute;
+  width:85%;
+  height:85%;
+  background:radial-gradient(circle,rgba(56,189,248,.35),transparent 70%);
+  filter:blur(40px);
+}
+
+.hero-img img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,.25);
+  position:relative;
+  z-index:1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    padding:40px;
+    text-align:center;
+  }
+
+  .cta{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .navbar{
+    justify-content:center;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="navbar">
+
+    <!-- NEW TEXT LOGO -->
+    <div class="logo">
+      <div class="logo-icon">WG</div>
+      <div class="logo-text"><span>Web</span>Guide</div>
+    </div>
+
+    <div class="links">
+      <a href="project1.html">Home</a>
+      <a href="Aboutus1.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+
+      <details>
+        <summary>Career Guidance</summary>
+        <a href="collegestudents.html">College Students</a>
+        <a href="workingprofessionals.html">Working Professionals</a>
+        <a href="educationalinstitutes.html">Institutions</a>
+      </details>
+
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <div>
+    <h1>
+      <span>Web Guide</span> Career Counselling Platform
+    </h1>
+
+    <p>
+      Web Guide is a modern career guidance platform designed to help students,
+      professionals, and institutions make confident, data-driven career decisions.
+    </p>
+
+    <p>
+      Using AI-powered psychometric assessments and expert counsellor support,
+      we guide individuals through education planning, skill development,
+      and long-term career success.
+    </p>
+
+    <p>
+      <strong>
+        Career Guidance • AI Assessments • Study Abroad • Mentorship • Training
+      </strong>
+    </p>
+
+    <div class="cta">
+      <a href="services.html">
+        <button class="primary-btn">Explore Services</button>
+      </a>
+      <a href="contactus.html">
+        <button class="secondary-btn">Contact Us</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img
+      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop"
+      alt="Career guidance and mentoring">
+  </div>
+
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>

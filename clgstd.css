@@ -1,0 +1,133 @@
+:root{
+   --primary:#2563eb;
+   --accent:#38bdf8;
+   --dark:#1e293b;
+   --muted:#475569;
+   --bg-main:linear-gradient(135deg,#e0f2fe,#f8fafc);
+   --glass:rgba(255,255,255,0.9);
+   --radius:22px;
+   --shadow-soft:0 25px 50px rgba(0,0,0,.08);
+  }
+
+
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+  }
+
+  body{
+  min-height:100vh;
+  background:var(--bg-main);
+  color:var(--dark);
+  line-height:1.6;
+  }
+
+.career-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* Glass Card */
+.career-card {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Text Section */
+.career-text {
+  flex: 1;
+}
+
+.career-text h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.career-text p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+/* Button */
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 34px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #0b2be2;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+}
+
+/* Image Section */
+.career-image {
+  flex: 1;
+  text-align: center;
+}
+
+.career-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .career-card {
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .career-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .career-card {
+    padding: 30px 20px;
+  }
+}

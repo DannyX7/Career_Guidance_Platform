@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Guidance for Institutions</title>
+
+  <style>
+    :root{
+   --primary:#2563eb;
+   --accent:#38bdf8;
+   --dark:#1e293b;
+   --muted:#475569;
+   --bg-main:linear-gradient(135deg,#e0f2fe,#f8fafc);
+   --glass:rgba(255,255,255,0.9);
+   --radius:22px;
+   --shadow-soft:0 25px 50px rgba(0,0,0,.08);
+  }
+
+
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+  }
+
+  body{
+  min-height:100vh;
+  background:var(--bg-main);
+  color:var(--dark);
+  line-height:1.6;
+  }
+
+    .section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .content h1 {
+      font-size: 2.6rem;
+      color: var(--dark);
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .content p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 35px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 14px 34px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 999px;
+      box-shadow: 0 12px 30px rgba(47, 128, 237, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(47, 128, 237, 0.5);
+    }
+
+    /* Illustration Section */
+    .visual {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .visual::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(86,204,242,0.35), transparent 70%);
+      filter: blur(50px);
+      z-index: 0;
+    }
+
+    .visual img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 22px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+      transition: transform 0.4s ease;
+    }
+
+    .visual img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 900px) {
+      .section {
+        flex-direction: column;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .content p {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="section">
+    <div class="content">
+      <h1>Career Guidance for Educational Institutions</h1>
+      <p>
+        Web Guide collaborates with educational institutions to provide expert
+        career guidance, personalized tools, and structured resources, fostering
+        long-term professional excellence among students.
+      </p>
+      <a href="contactus.html" class="cta">GET STARTED</a>
+    </div>
+
+    <div class="visual">
+      <!-- High-quality illustration -->
+      <img 
+        src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop"
+        alt="Educational institution and student guidance illustration">
+    </div>
+  </section>
+
+</body>
+</html>
